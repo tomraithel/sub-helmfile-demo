@@ -1,0 +1,9 @@
+environments:
+  default:
+    values:
+      - foo: "root-foo"
+---
+helmfiles:
+  - path: ./helmfiles/sub-helmfile.yaml
+    values:
+      - values.yaml.gotmpl

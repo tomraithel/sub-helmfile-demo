@@ -1,0 +1,11 @@
+environments:
+  default:
+    values:
+      - foo: "sub-foo"
+---
+releases:
+  - name: testservice
+    namespace: test
+    chart: ./test
+    values:
+      - sub-values.yaml.gotmpl
